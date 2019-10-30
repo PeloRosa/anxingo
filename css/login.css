@@ -1,0 +1,111 @@
+@charset "UTF-8";
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, hr, td, input, textarea {
+  margin: 0;
+  padding: 0; }
+
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+img {
+  border: none;
+  display: block; }
+
+html, body {
+  height: 100%; }
+
+body {
+  display: -webkit-flex;
+  flex-direction: column;
+  font-family: "微软雅黑";
+  -webkit-flex-wrap: wrap;
+  background: whitesmoke; }
+
+html {
+  font-size: 26.67vw; }
+
+header {
+  height: 2.0rem;
+  width: 100%;
+  position: relative; }
+  header img {
+    width: 100%;
+    height: 100%; }
+  header .header-bgImg {
+    border-bottom-right-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+    box-shadow: 0 0 10px #492904; }
+  header .header__headerBox {
+    height: 0.6rem;
+    width: 0.6rem;
+    position: absolute;
+    bottom: -.3rem;
+    left: 50%;
+    margin-left: -.3rem;
+    border-radius: 50%;
+    border: 3px solid #2c2424;
+    box-shadow: 0 3px 8px #49290494; }
+    header .header__headerBox .headerBox-img {
+      border-radius: 50%; }
+
+.infoBox {
+  box-shadow: 0 0 10px #8f8f8f59;
+  height: 1.5rem;
+  width: 90%;
+  margin: .4rem auto 0;
+  background: white;
+  border-radius: 5px;
+  padding: 0 .25rem;
+  box-sizing: border-box; }
+  .infoBox .infoBox__inputBox {
+    position: relative;
+    height: 49.5%;
+    width: 100%; }
+    .infoBox .infoBox__inputBox .iconfont {
+      display: block;
+      position: absolute;
+      top: .2rem;
+      left: 0;
+      font-size: .3rem;
+      color: #7c7c7c; }
+    .infoBox .infoBox__inputBox input {
+      outline: none;
+      text-indent: .5rem;
+      border: 0;
+      height: 100%;
+      width: 100%;
+      float: left;
+      font-size: .15rem; }
+    .infoBox .infoBox__inputBox input[type=password] {
+      border-top: 1px solid #ccc; }
+
+.loginBtn {
+  height: .7rem;
+  width: 90%;
+  border-radius: 5px;
+  margin: .5rem auto .3rem;
+  background: burlywood;
+  box-shadow: 2px 2px 5px rgba(100, 83, 61, 0.24);
+  text-align: center; }
+  .loginBtn span {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    line-height: .7rem;
+    font-size: .18rem;
+    font-weight: bolder;
+    color: white; }
+
+.goToRegister {
+  height: .5rem;
+  width: 100%;
+  text-align: center;
+  font-size: .13rem; }
+  .goToRegister a {
+    color: #7c7c7c; }
+
+/*# sourceMappingURL=login.css.map */

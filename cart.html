@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header>
+        <span>全场满一百元包邮</span>
+    </header>
+<!-- content -->
+    <div class="content">
+        <section>
+            <div class="mainbox">
+                <div class="checkbox">
+                    <input type="checkbox" class="checkItem">
+                </div>
+                <img src="img/product01.png" alt="">
+                <div class="actBox">
+                    <span>新疆阿克苏溏心苹果4.5kg原箱国直径80MM以上</span>
+                    <span>直降</span>
+                    <div class="actBox_bottom">
+                        <span class="price">59</span>
+                        <span>￥78</span>
+                        <div class="input_price">
+                            <input type="button" class="reduceBtn" value="-">
+                            <input type="text" class="num" value="0">
+                            <input type="button" class="addBtn" value="＋">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_box">满减 <b>满1件，即享受19元优惠</b> </div>
+        </section>
+        <section>
+            <div class="mainbox">
+                <div class="checkbox">
+                    <input type="checkbox" class="checkItem">
+                </div>
+                <img src="img/product01.png" alt="">
+                <div class="actBox">
+                    <span>新疆阿克苏溏心苹果4.5kg原箱国直径80MM以上</span>
+                    <span>直降</span>
+                    <div class="actBox_bottom">
+                        <span class="price">59</span>
+                        <span>￥78</span>
+                        <div class="input_price">
+                            <input type="button" class="reduceBtn" value="-">
+                            <input type="text" class="num" value="0">
+                            <input type="button" class="addBtn" value="＋">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_box">满减 <b>满1件，即享受19元优惠</b> </div>
+        </section>
+        <section>
+            <div class="mainbox">
+                <div class="checkbox">
+                    <input type="checkbox" class="checkItem">
+                </div>
+                <img src="img/product01.png" alt="">
+                <div class="actBox">
+                    <span>新疆阿克苏溏心苹果4.5kg原箱国直径80MM以上</span>
+                    <span>直降</span>
+                    <div class="actBox_bottom">
+                        <span class="price">59</span>
+                        <span>￥78</span>
+                        <div class="input_price">
+                            <input type="button" class="reduceBtn" value="-">
+                            <input type="text" class="num" value="0">
+                            <input type="button" class="addBtn" value="＋">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_box">满减 <b>满1件，即享受19元优惠</b> </div>
+        </section>
+        <section>
+            <div class="mainbox">
+                <div class="checkbox">
+                    <input type="checkbox" class="checkItem">
+                </div>
+                <img src="img/product01.png" alt="">
+                <div class="actBox">
+                    <span>新疆阿克苏溏心苹果4.5kg原箱国直径80MM以上</span>
+                    <span>直降</span>
+                    <div class="actBox_bottom">
+                        <span class="price">59</span>
+                        <span>￥78</span>
+                        <div class="input_price">
+                            <input type="button" class="reduceBtn" value="-">
+                            <input type="text" class="num" value="0">
+                            <input type="button" class="addBtn" value="＋">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_box">满减 <b>满1件，即享受19元优惠</b> </div>
+        </section>
+        <section>
+            <div class="mainbox">
+                <div class="checkbox">
+                    <input type="checkbox" class="checkItem">
+                </div>
+                <img src="img/product01.png" alt="">
+                <div class="actBox">
+                    <span>新疆阿克苏溏心苹果4.5kg原箱国直径80MM以上</span>
+                    <span>直降</span>
+                    <div class="actBox_bottom">
+                        <span class="price">59</span>
+                        <span>￥78</span>
+                        <div class="input_price">
+                            <input type="button" class="reduceBtn" value="-">
+                            <input type="text" class="num" value="0">
+                            <input type="button" class="addBtn" value="＋">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_box">满减 <b>满1件，即享受19元优惠</b> </div>
+        </section>
+    </div>
+
+<!-- footer -->
+    <footer id="footer">
+        <div class="footerTop">
+            <div class="checkbox">
+                <input type="checkbox" class="checkItem checkAll">
+                <b>全选</b>
+            </div>
+            <div class="sumMoney"></div>
+            <div class="goPay"></div>
+        </div>
+        <div class="footerBottom">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/checkbox.js"></script>
+<script>
+    $(function(){
+        $(".reduceBtn").click(function(){
+            let $text = $(this).next();
+            $text.val(parseInt($text.val())-1);
+            calMoney();
+        })
+        $(".addBtn").click(function(){
+            let $text = $(this).prev();
+            $text.val(parseInt($text.val())+1);
+            calMoney();
+        })
+        $(".checkAll").bindCheckBox($(".content :checkbox"),calMoney);
+    })
+
+    function calMoney(){
+        let money = 0;
+        let $subCheckBox = $("section :checkbox");
+        for(let i = 0 ; i < $subCheckBox.length ; i++){
+            if($subCheckBox[i].checked){
+                let $products = $($subCheckBox[i].parentNode.parentNode);
+                money += parseFloat($products.find(".price").html())*parseFloat($products.find(".num").val());
+            }
+        }
+        $(".sumMoney").html(money);
+    }
+</script>

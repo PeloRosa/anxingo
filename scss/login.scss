@@ -1,0 +1,140 @@
+@charset "UTF-8";
+@mixin baseDisplay{
+    display: -webkit-flex;
+    -webkit-justify-content:space-around;
+    -webkit-align-items:center;
+}
+
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, hr, td, input, textarea {
+  margin: 0;
+  padding: 0; }
+
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; 
+  color: black;
+}
+
+img {
+  border: none;
+  display: block; }
+
+html, body {
+  height: 100%; }
+
+body {
+  display: -webkit-flex;
+  flex-direction: column;
+  font-family: "微软雅黑";
+  -webkit-flex-wrap: wrap;
+  background: rgb(245, 245, 245);
+}
+
+html {
+    font-size: 26.67vw; 
+}
+
+// header
+header{
+    height:2.0rem;
+    width:100%;
+    position: relative;
+    img{
+        width:100%;
+        height:100%;
+    }
+    .header-bgImg{
+        border-bottom-right-radius: .3rem;
+        border-bottom-left-radius: .3rem;
+        box-shadow: 0 0 10px #492904;
+    }
+    .header__headerBox{
+        height:0.6rem;
+        width:0.6rem;
+        position: absolute;
+        bottom:-.3rem;
+        left:50%;
+        margin-left: -.3rem;
+        border-radius: 50%;
+        border:3px solid rgb(44, 36, 36);
+        box-shadow: 0 3px 8px #49290494;
+        .headerBox-img{
+            // margin:5px auto;
+            border-radius: 50%;
+            // height:90%;
+            // width:90%;
+        }
+    }
+}
+
+// infoBox
+.infoBox{
+    box-shadow: 0 0 10px #8f8f8f59;
+    height:1.5rem;
+    width: 90%;
+    margin: .4rem auto 0;
+    background:white;
+    border-radius: 5px;
+    padding:0 .25rem;
+    box-sizing: border-box;
+    .infoBox__inputBox{
+        position: relative;
+        height:49.5%;
+        width:100%;
+        .iconfont{
+            display: block;
+            position: absolute;
+            top:.2rem;
+            left:0;
+            font-size: .3rem;
+            color: #7c7c7c;
+        }
+        input{
+            outline: none;
+            text-indent: .5rem;
+            border:0;
+            height:100%;
+            width:100%;
+            float: left;
+            font-size: .15rem;
+        }
+        input[type=password]{
+            border-top: 1px solid #ccc;
+        }
+    }
+}
+
+// loginBtn
+.loginBtn{
+    height:.7rem;
+    width:90%;
+    border-radius: 5px;
+    margin:.5rem auto .3rem;
+    background: burlywood;
+        box-shadow: 2px 2px 5px rgba(100, 83, 61, 0.24);
+        text-align: center;
+    span{
+        width:50%;
+        margin:0 auto;
+        text-align: center;
+        display: block;
+        line-height: .7rem;
+        font-size: .18rem;
+        // letter-spacing: .2rem;
+        font-weight: bolder;
+        color:white;
+    }
+}
+
+// goToRegister
+.goToRegister{
+    height: .5rem;
+    width:100%;
+    text-align: center;
+    font-size: .13rem;
+    a{
+        color:#7c7c7c;
+    }
+}

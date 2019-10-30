@@ -1,0 +1,10 @@
+@import 'login';
+.infoBox{
+    height:2rem;
+    .infoBox__inputBox{
+        height:33%;
+        .testify{
+            border-top: 1px solid #ccc;
+        }
+    }
+}
