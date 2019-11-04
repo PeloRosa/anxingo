@@ -1,0 +1,326 @@
+@charset "UTF-8";
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, hr, td, input, textarea {
+  margin: 0;
+  padding: 0; }
+
+ul, ol, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: none;
+  display: block; }
+
+html, body {
+  height: 100%; }
+
+body {
+  display: -webkit-flex;
+  flex-direction: column;
+  font-family: "微软雅黑";
+  -webkit-flex-wrap: wrap;
+  line-height: .12rem; }
+
+html {
+  font-size: 26.67vw; }
+
+header {
+  display: -webkit-flex;
+  -webkit-justify-content: flex-start;
+  -webkit-align-item: center;
+  width: 100%;
+  height: .4rem;
+  background: rgb(0, 173, 9); }
+  header span {
+    margin-left: .1rem;
+    color: white;
+    font-size: 0.12rem;
+    letter-spacing: 2px;
+    line-height: .4rem; }
+
+.content {
+  width: 100%;
+  display: -webkit-flex;
+  overflow-y: auto;
+  -webkit-flex: 1;
+  -webkit-flex-wrap: wrap; }
+
+.content {
+  -webkit-justify-content: center;
+  background:  rgb(31, 105, 34);
+  padding-top: 19px;
+  padding-bottom: 19px; }
+  .content section {
+    background: white;
+    height: 1.33rem;
+    width: 100%;
+    border-bottom: 1px solid #ccc; }
+    .content section .mainbox {
+      display: -webkit-flex;
+      -webkit-justify-content: space-between;
+      height: 1.03rem;
+      width: 100%; }
+      .content section .mainbox img {
+        width: .78rem;
+        height: 1.03rem; }
+      .content section .mainbox .actBox {
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        -webkit-justify-content: space-between;
+        width: 2.60rem;
+        height: 1.03rem;
+        background: white;
+        padding: .13rem;
+        box-sizing: border-box; }
+        .content section .mainbox .actBox span {
+          font-size: .12rem;
+          height: .3rem;
+          width: 1.9rem;
+          line-height: .14rem; }
+          .content section .mainbox .actBox span:nth-child(2) {
+            border: 1px solid #51cd32;
+            border-radius: .05rem;
+            height: .11rem;
+            width: .3rem;
+            line-height: .11rem;
+            text-align: center;
+            color: #51cd32; }
+        .content section .mainbox .actBox .actBox_bottom {
+          display: -webkit-flex;
+          -webkit-justify-content: space-between;
+          -webkit-align-items: center;
+          height: .2rem;
+          width: 2.31rem; }
+          .content section .mainbox .actBox .actBox_bottom .price {
+            text-indent: .1rem;
+            position: relative; }
+            .content section .mainbox .actBox .actBox_bottom .price:after {
+              position: absolute;
+              top: 0;
+              left: -.1rem;
+              font-size: 0.1rem;
+              color: red;
+              content: "￥"; }
+          .content section .mainbox .actBox .actBox_bottom span:nth-child(2) {
+            color: gray;
+            height: 100%;
+            width: 1.22rem;
+            text-align: left;
+            padding-left: .06rem;
+            box-sizing: border-box;
+            line-height: .2rem;
+            border: 0;
+            text-decoration: line-through;
+            font-size: 0.11rem; }
+          .content section .mainbox .actBox .actBox_bottom span:nth-child(1) {
+            color: red;
+            height: 100%;
+            width: .33rem;
+            line-height: .2rem;
+            font-weight: bolder;
+            font-size: 0.13rem; }
+          .content section .mainbox .actBox .actBox_bottom .input_price {
+            display: -webkit-flex;
+            -webkit-flex-direction: row;
+            width: .75rem;
+            height: 100%;
+            background-color: blue; }
+            .content section .mainbox .actBox .actBox_bottom .input_price input {
+              width: .2rem;
+              height: 100%;
+              background: white;
+              border: 0.5px solid #ccc; }
+            .content section .mainbox .actBox .actBox_bottom .input_price .num {
+              text-align: center;
+              width: .35rem;
+              height: .19rem;
+              border-left: 0px;
+              border-right: 0; }
+      .content section .mainbox .checkbox {
+        height: 1.03rem;
+        width: .38rem;
+        display: -webkit-flex;
+        -webkit-justify-content: space-between;
+        -webkit-align-items: center;
+        -webkit-justify-content: center; }
+        .content section .mainbox .checkbox .checkItem {
+          position: relative;
+          width: .14rem;
+          height: .14rem; }
+          .content section .mainbox .checkbox .checkItem:after {
+            position: absolute;
+            height: .16rem;
+            width: .16rem;
+            top: -0.02rem;
+            left: -0.02rem;
+            content: "";
+            background: white;
+            border: 0.5px solid #ccc;
+            border-radius: 50%;
+            display: inline-block; }
+          .content section .mainbox .checkbox .checkItem:checked:after {
+            position: absolute;
+            height: .16rem;
+            width: .16rem;
+            top: -0.02rem;
+            left: -0.02rem;
+            content: "";
+            background: #51cd32;
+            border: 0.5px solid #51cd32;
+            border-radius: 50%;
+            display: inline-block; }
+          .content section .mainbox .checkbox .checkItem:checked:before {
+            position: absolute;
+            height: .16rem;
+            width: .16rem;
+            top: -0.03rem;
+            left: 0;
+            content: "\2714";
+            color: white;
+            font-size: .15rem;
+            z-index: 1;
+            display: inline-block; }
+    .content section .info_box {
+      width: 3.37rem;
+      height: .3rem;
+      font-size: 0.1rem;
+      line-height: .3rem;
+      border-top: 1px solid #ccc;
+      float: right; }
+      .content section .info_box b {
+        font-weight: normal;
+        color: #757575; }
+
+#footer {
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  height: .98rem;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ccc; }
+  #footer .footerTop {
+    height: .47rem;
+    width: 100%;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center; }
+
+.footerBottom {
+  display: -webkit-flex;
+  -webkit-justify-content: space-around;
+  -webkit-align-items: center;
+  width: 100%;
+  height: .5rem;
+  background: #f4f4f3; }
+  .footerBottom a {
+    // background: #ffffa4;
+    height: 0.5rem;
+    width: .5rem; }
+
+.footerTop .sumMoney {
+  width: 2rem;
+  height: 100%;
+  position:relative;
+//   background: pink;
+  font-size: 0.12rem; 
+  text-indent: .3rem;
+  line-height: .45rem;
+  &:after{
+    position:absolute;
+    left:-20px;
+    top:0;
+    content:"￥";
+    font-weight: bolder;
+    color:red;
+    font-size: .15rem;
+  }
+}
+.footerTop .goPay {
+  width: 1.09rem;
+  height: 100%;
+  border-radius: 8px;
+  letter-spacing: .2rem;
+  text-indent: .15rem;
+  font-size:.15rem;
+  line-height: .45rem;
+  text-align: center;
+  color:white;
+  background: green; }
+.footerTop .checkbox {
+  font-size: 0.13rem;
+  height: .48rem;
+  width: .6rem;
+  padding-left: .07rem;
+  text-align: left;
+  display: -webkit-flex;
+  -webkit-justify-content: space-around;
+  -webkit-align-items: center; }
+  .footerTop .checkbox b {
+    font-weight: normal; }
+  .footerTop .checkbox .checkItem {
+    position: relative;
+    width: .14rem;
+    height: .14rem; }
+    .footerTop .checkbox .checkItem:after {
+      position: absolute;
+      height: .16rem;
+      width: .16rem;
+      top: -0.02rem;
+      left: -0.02rem;
+      content: "";
+      background: white;
+      border: 0.5px solid #ccc;
+      border-radius: 50%;
+      display: inline-block; }
+    .footerTop .checkbox .checkItem:checked:after {
+      position: absolute;
+      height: .16rem;
+      width: .16rem;
+      top: -0.02rem;
+      left: -0.02rem;
+      content: "";
+      background: #51cd32;
+      border: 0.5px solid #51cd32;
+      border-radius: 50%;
+      display: inline-block; }
+    .footerTop .checkbox .checkItem:checked:before {
+      position: absolute;
+      height: .16rem;
+      width: .16rem;
+      top: -0.03rem;
+      left: 0;
+      content: "\2714";
+      color: white;
+      font-size: .15rem;
+      z-index: 1;
+      display: inline-block; }
+.footerBottom{
+      a{
+        color:black;
+        text-align: center;
+        display: inline-block;
+        height:.5rem;
+        font-size: .2rem;
+        // width: 20%;
+        .icon{
+            display: block;
+            width:100%;
+            margin-top: 10px;
+        }
+        .footer-tit{
+            margin-top: 10px;
+            line-height: 10px;
+            display: block;
+            width:100%;
+            font-size: .13rem;
+        }
+        &:hover{
+            color:rgb(48, 160, 48);
+        }
+    }
+}
+/*# sourceMappingURL=cart.css.map */
